@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>~</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<script src="scripts/transitions.js"></script>
+	</head>
+
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
+
+		<!-- Welcome screen -->
+		<div id="main_window">
+			<img id=leftImg src="assets/img/image.png" class="image">
+			<div id="content">
+				<h1 class="title">Welcome</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+
+		<!-- Web search -->
+				<div id="web_search">
+					<form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+						<label for="q">></label>
+						<input autofocus
+			        	 		id="q"
+			         			name="q"
+			         			type="search"
+			         			placeholder="search with duckduckgo...">
+					</form>
+				</div>
+
+		<!-- Links -->
+				<nav>
+					<div id=links_container>
+						<ul>
+							<a class="subtitle"></a>
+								<li><a href="https://beta.protonmail.com/u/0/inbox">ProtonMail</a></li>
+								<li><a href="https://drive.protonmail.com/u/0/">ProtonDrive</a></li>
+								<li><a href="https://catbox.moe/">Catbox</a></li>
+								<li><a href="https://litterbox.catbox.moe/">Litterbox</a></li>
+								<li><a href="https://nyaa.si/?f=0&c=1_2&q=">nyaa</a></li>
+								<li><a href="https://1337x.to/"></a>1337x</li>
+								<li><a href="https://drive.google.com/drive/">G Drive</a></li>
+								<li><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle"></a>
+								<li><a href="https://boards.4channel.org/a/">/a/</a></li>
+								<li><a href="https://boards.4channel.org/jp/">/jp/</a></li>
+								<li><a href="https://old.reddit.com/">Reddit</a></li>
+								<li><a href="https://twitter.com/home">Twitter</a></li>
+								<li><a href="https://forum.il2sturmovik.com/forum/114-mods/">IL-2</a></li>
+								<li><a href="https://gelbooru.com/">Gelbooru</a></li>
+								<li><a href="https://www.pixiv.net/en/">Pixiv</a></li>
+								<li><a href="https://exhentai.org/">sad panda</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+
+	</body>
+</html>
